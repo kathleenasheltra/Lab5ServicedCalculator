@@ -49,38 +49,20 @@ namespace SimpleCalculator
                 switch (btn.Name)
                 {
                     case "btnOne":
-                        txtInput.Text += "1";
-                        break;
                     case "btnTwo":
-                        txtInput.Text += "2";
-                        break;
                     case "btnThree":
-                        txtInput.Text += "3";
-                        break;
                     case "btnFour":
-                        txtInput.Text += "4";
-                        break;
                     case "btnFive":
-                        txtInput.Text += "5";
-                        break;
                     case "btnSix":
-                        txtInput.Text += "6";
-                        break;
-                    case "btnSeven":
-                        txtInput.Text += "7";
-                        break;
-                    case "btnEight":
-                        txtInput.Text += "8";
-                        break;
-                    case "btnNine":
-                        txtInput.Text += "9";
-                        break;
+                    case "btnSeven":                        
+                    case "btnEight":                    
+                    case "btnNine":                       
                     case "btnZero":
-                        txtInput.Text += "0";
+                        txtInput.Text += btn.Text ;
                         break;
                     case "btnDot":
-                        if(!txtInput.Text.Contains("."))
-                            txtInput.Text += ".";
+                        if (!txtInput.Text.Contains("."))
+                            txtInput.Text += btn.Text;
                         break;
 
                 }

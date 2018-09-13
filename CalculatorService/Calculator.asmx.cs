@@ -37,5 +37,20 @@ namespace CalculatorService
         {
             return f1 * f2;
         }
+        [WebMethod]
+        public double SqrRoot(double f1)
+        {
+            return System.Math.Sqrt(f1);
+        }
+        [WebMethod]
+        public double Halve(double f1)
+        {
+            return f1 / 2;
+        }
+        [WebMethod]
+        public double Quarter(double f1)
+        {
+            return f1 / 4;
+        }
     }
 }
