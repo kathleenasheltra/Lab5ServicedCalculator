@@ -136,38 +136,40 @@ namespace SimpleCalculator
 
         private void btnEqual_Click(object sender, EventArgs e)
         {
-            operand2 = txtInput.Text;
+            
+                operand2 = txtInput.Text;
 
-            double opr1, opr2;
-            double.TryParse(operand1, out opr1);
-            double.TryParse(operand2, out opr2);
+                double opr1, opr2;
+                double.TryParse(operand1, out opr1);
+                double.TryParse(operand2, out opr2);
 
-            switch (operation)
-            {
-                case '+':
-                    result = Convert.ToString(calcRef.Add(opr1, opr2));
-                    break;
+                switch (operation)
+                {
+                    case '+':
+                        result = Convert.ToString(calcRef.Add(opr1, opr2));
+                        break;
 
-                case '-':
-                    result = Convert.ToString(calcRef.Subtract(opr1, opr2));
-                    break;
+                    case '-':
+                        result = Convert.ToString(calcRef.Subtract(opr1, opr2));
+                        break;
 
-                case '*':
-                    result = Convert.ToString(calcRef.Multiply(opr1, opr2)); break;
+                    case '*':
+                        result = Convert.ToString(calcRef.Multiply(opr1, opr2)); break;
 
-                case '/':
-                    if (opr2 != 0)
-                    {
-                        result = Convert.ToString(calcRef.Divide(opr1, opr2));
-                    }
-                    else
-                    {
-                        MessageBox.Show("Can't divide by zero");
-                    }
-                    break;
+                    case '/':
+                        if (opr2 != 0)
+                        {
+                            result = Convert.ToString(calcRef.Divide(opr1, opr2));
+                        }
+                        else
+                        {
+                            MessageBox.Show("Can't divide by zero");
+                        }
+                        break;
+                    default:
+                        return;
+                
             }
-
-            txtInput.Text = result.ToString();
         }
 
         private void btnClear_Click(object sender, EventArgs e)

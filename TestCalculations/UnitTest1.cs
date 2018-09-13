@@ -24,8 +24,8 @@ namespace TestCalculations
         public void MultiplyTest()
         {
             var calcRef = new Calculator.CalculatorSoapClient();
-            var product = calcRef.Multiply(1, 1);
-            Assert.AreEqual(1, product);
+            var product = calcRef.Multiply(9, 2);
+            Assert.AreEqual(18, product);
         }
         [TestMethod]
         public void DivideTest()
